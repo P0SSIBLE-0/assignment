@@ -1,0 +1,51 @@
+// backend/tsconfig.json
+{
+  "compilerOptions": {
+    /* Basic Options */
+    "target": "ES2020", // Target modern ECMAScript version supported by recent Node.js LTS
+    "module": "NodeNext", // Standard module system for Node.js unless you specifically set up ESM
+    "lib": ["ES2020"], // Include standard ES2020 libraries (no DOM for backend)
+    "outDir": "./dist", // Where compiled JS files will go
+    "rootDir": "./src", // Where your TS source files are located
+    "sourceMap": true, // Generate source maps for debugging
+
+    /* Strict Type-Checking Options */
+    "strict": true, // Enable all strict type-checking options
+    "noImplicitAny": true, // Raise error on expressions and declarations with an implied 'any' type.
+    "noEmitOnError": true, // Emit error when there is a type error.
+    "strictNullChecks": true, // Enable strict null checks.
+    "strictFunctionTypes": true, // Enable strict checking of function types.
+    "strictBindCallApply": true, // Enable strict 'bind', 'call', and 'apply' methods on functions.
+    "strictPropertyInitialization": true, // Ensure non-undefined class properties are initialized in the constructor.
+    "noImplicitThis": true, // Raise error on 'this' expressions with an implied 'any' type.
+    "alwaysStrict": true, // Parse in strict mode and emit "use strict" for each source file.
+
+    /* Module Resolution Options */
+    "moduleResolution": "nodenext", // Use Node.js style module resolution
+    "baseUrl": "./", // Base directory to resolve non-absolute module names (optional, can be useful)
+    "paths": { // Optional: Define path aliases if needed (e.g., "@/*": ["src/*"])
+      // "@controllers/*": ["src/controllers/*"],
+      // "@services/*": ["src/services/*"]
+    },
+    "resolveJsonModule": true, // Allows importing JSON files
+    "esModuleInterop": true, // Enables compatibility with CommonJS modules (important for libraries like Express)
+
+    /* Advanced Options */
+    "skipLibCheck": true, // Skip type checking of declaration files (*.d.ts) - speeds up compilation
+    "forceConsistentCasingInFileNames": true, // Disallow inconsistently-cased references to the same file.
+    "experimentalDecorators": true, // Enable experimental support for decorators (might be needed by some libraries, e.g., TypeORM, NestJS - potentially not needed for basic Express/Prisma)
+    "emitDecoratorMetadata": true, // Enable metadata emission for decorators (often used with experimentalDecorators)
+
+    /* Prisma Specific (Implicit) */
+    // Prisma Client generation works fine with these settings. No specific TS compiler options are usually needed just for Prisma Client itself.
+  },
+  "include": [
+    "src/**/*" // Include all files within the src directory
+  ],
+  "exclude": [
+    "node_modules", // Exclude node_modules
+    "dist", // Exclude the output directory
+    "**/*.spec.ts", // Exclude test files if you follow this naming convention
+    "**/*.test.ts" // Exclude test files if you follow this naming convention
+  ]
+}
