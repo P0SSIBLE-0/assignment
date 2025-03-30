@@ -10,7 +10,7 @@ The goal was to build a full-stack application based on a provided Figma design 
 
 ## Video Demonstration
 
-[Link to Google Drive Video Demonstration](https://drive.google.com/file/d/1xaNJXe3KUiFaIc5QSh4iy56vDXGqv5F6/view?usp=sharing) - **<-- Replace this with your actual Google Drive link! Make sure it's accessible.**
+[Link to Google Drive Video Demonstration](https://drive.google.com/file/d/1xaNJXe3KUiFaIc5QSh4iy56vDXGqv5F6/view?usp=sharing) 
 
 ## Features
 
