@@ -2,8 +2,7 @@
 export default function Dashboard() {
   return (
     <div>
-      dashboard   
-         
+      dashboard  // Add your dashboard content here...
     </div>
   )
 }

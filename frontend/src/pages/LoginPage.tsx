@@ -80,7 +80,7 @@ export default function LoginPage() {
           }
         </div>
         <div className="w-full">
-          <Button type="submit"  text="Register" isDisabled={isSubmitting} />
+          <Button type="submit"  text="Login" isDisabled={isSubmitting} />
           <p className="text-center">
             already have an account? <a href="/register">register</a>
           </p>

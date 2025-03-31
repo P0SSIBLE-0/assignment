@@ -4,8 +4,12 @@ type ButtonProps = {
   type: "submit" | "reset" | "button" | undefined
   onClick?: () => void
 }
-export default function Button({text, isDisabled, onClick, type}: ButtonProps) {
+export default function Button({text, isDisabled, onClick, type, ...rest}: ButtonProps) {
   return (
-      <button type={type} className="btn" onClick={onClick} disabled={isDisabled} >{text}</button>
+      <button 
+      type={type} 
+      className="btn" 
+      {...rest}
+      disabled={isDisabled} >{text}</button>
   )
 }
